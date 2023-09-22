@@ -55,7 +55,6 @@ model = tf.keras.Sequential([
     tf.keras.layers.Dense(10, activation=tf.nn.softmax)
 ])
 
-
 model.compile(optimizer='adam',
               loss=tf.keras.losses.SparseCategoricalCrossentropy(),
               metrics=['accuracy'])
@@ -68,10 +67,6 @@ model.fit(train_ds, epochs=10, steps_per_epoch=math.ceil(num_test_examples/BATCH
 
 test_loss, test_acc = model.evaluate(test_ds, steps=math.ceil(num_test_examples/32))
 print('Accuracy on test dataset:', test_acc)
-
-
-
-
 
 
 

@@ -81,3 +81,4 @@ for test_images, test_labels in test_ds.take(1):
 print(predictions.shape)
 print(predictions[0])
 print(np.argmax(predictions[0]))
+
